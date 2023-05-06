@@ -79,6 +79,7 @@ function batting(){
         alert("No possible clicks")
         return;   
     } else{
+         document.getElementById("rem_balls").innerHTML=6-count;
         k=runs[Math.floor(Math.random()*6)]
         console.log(k)
         document.getElementById("each").innerHTML=k
@@ -95,7 +96,7 @@ function batting(){
             score+=k
         }
     }
-     document.getElementById("rem_balls").innerHTML=6-count;
+    
     document.getElementById("score").innerHTML=score;
     count+=1;
     document.getElementById("target").innerHTML=score+1;
