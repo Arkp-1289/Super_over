@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super_over</title>
+    <link rel="stylesheet" href="cric.css">
+    <!-- <style>
+        body{
+            background-image: url('bg.jpg');
+        }
+    </style> -->
+    
+</head>
+<body >
+    <h1 style="text-align: center;">ARKP PLAY GROUND</h1>
+    <h1 id="tres" style="text-align: center;">Toss Update :</h1>
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <h2 id="bowl_team">Column 1</h2>
+            <p> Bowling</p>
+        </div>
+        <div class="column">
+            <h2>Total</h2>
+            <h2 id="score"></h2>  
+            <h2 id="wick"></h2>
+            <h2>Ball Score</h2>
+            <h1 id="each"></h1> 
+            <h2>Balls Remaining</h2>
+            <h1 id="rem_balls"></h1>
+        </div>
+        
+        <div class="column" style="background-color:#ccc;">
+            <h2 id="bat_team">Column 3</h2>
+            <p>Batting</p>
+        </div>
+        
+        <button style="float: left;border-radius: 25%;" onclick="batting()" >
+            <h2>Play</h2>
+        </button>
+        <button  style="float: right;border-radius: 25%" onclick="bowling()" >
+            <h2>Play</h2>
+        </button>
+    </div>
+    <div class="final_result">
+        <h1>TARGET</h1>
+        <h1 id="target"></h1>
+        <h1>CHASED</h1>
+        <h1 id="score2"></h1>
+        <h1 final()>RESULT</h1>
+        <h1 id="result"></h1>
+        <input type="reset" onclick="location.reload()"/>
+    </div>
+        
+<script src="cricket.js"></script>
+</body>
+
+</html>
