@@ -111,17 +111,18 @@ score2 = 0
 
 
 function bowling() {
-    if (bat == 1) {
+    if (count<7) { alert("bowling team have to finish first"); return; }
+     if (bat == 1) {
         document.getElementById("bat_team").innerHTML = "TEAM - B"
         document.getElementById("bowl_team").innerHTML = "TEAM - A"
     } else {
         document.getElementById("bat_team").innerHTML = "TEAM - A"
         document.getElementById("bowl_team").innerHTML = "TEAM - B"
     }
-    if (count<7) { alert("bowling team have to finish first"); return; }
     if (count2 > 6) {
         alert("No possible clicks")
         return;
+    
     } else {
         k = runs[Math.floor(Math.random() * 6)]
         console.log(k)
