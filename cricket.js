@@ -87,7 +87,6 @@ function batting() {
             bat_w_c += 1
             if (bat_w_c > 1) {
                 document.getElementById("wick").innerHTML = "Two wickets down ";
-                document.getElementById("rem_balls").innerHTML = 6 - count;
                 count = 7;
                 document.getElementById("score").innerHTML = score;
                 document.getElementById("target").innerHTML = score + 1;
@@ -119,7 +118,7 @@ function bowling() {
         document.getElementById("bat_team").innerHTML = "TEAM - A"
         document.getElementById("bowl_team").innerHTML = "TEAM - B"
     }
-    if (count<7) { alert("bowling team have to bowl first"); return; }
+    if (count<7) { alert("bowling team have to finish first"); return; }
     if (count2 > 6) {
         alert("No possible clicks")
         return;
