@@ -1,10 +1,10 @@
 runs = [1, 2, 3, 4, 6, "W"]
 s_a = 0
 s_b = 0
-TEAM-A="TEAM-A"
-TEAM-B="TEAM-B"
-TEAM-A=prompt("enter 1st team name");
-TEAM-B=prompt("enter 2nd team name");
+TEAM_A="TEAM-A"
+TEAM_B="TEAM-B"
+TEAM_A=prompt("enter 1st team name");
+TEAM_B=prompt("enter 2nd team name");
 toss = prompt("enter Head(h) or Tail(t)");
 String(toss)
 
@@ -43,15 +43,15 @@ function res(T) {
         if (option.toLowerCase() == "bat") {
             document.getElementById("tres").innerHTML += "TEAM-A  won the toss and Elected to bat first";
             bat = 1;
-            document.getElementById("bat_team").innerHTML = TEAM - A;
-            document.getElementById("bowl_team").innerHTML = TEAM - B;
+            document.getElementById("bat_team").innerHTML = TEAM_A;
+            document.getElementById("bowl_team").innerHTML = TEAM_B;
 
 
         } else {
             document.getElementById("tres").innerHTML += "TEAM-A you won the toss and Elected to Bowl first";
             bat = 2;
-            document.getElementById("bowl_team").innerHTML = TEAM - A;
-            document.getElementById("bat_team").innerHTML = TEAM - B;
+            document.getElementById("bowl_team").innerHTML = TEAM_A;
+            document.getElementById("bat_team").innerHTML = TEAM_B;
 
         }
 
@@ -60,14 +60,14 @@ function res(T) {
         if (option.toLowerCase() == "bat") {
             document.getElementById("tres").innerHTML += "TEAM-B  won the toss and Elected to bat first";
             bat = 2;
-            document.getElementById("bat_team").innerHTML = TEAM - B;
-            document.getElementById("bowl_team").innerHTML = TEAM - A;
+            document.getElementById("bat_team").innerHTML = TEAM_B;
+            document.getElementById("bowl_team").innerHTML = TEAM_A;
 
         } else {
             document.getElementById("tres").innerHTML += "TEAM-B you won the toss and Elected to Bowl first";
             bat = 1;
-            document.getElementById("bowl_team").innerHTML = TEAM - B;
-            document.getElementById("bat_team").innerHTML = TEAM - A;
+            document.getElementById("bowl_team").innerHTML = TEAM_B;
+            document.getElementById("bat_team").innerHTML = TEAM_A;
 
         }
 
@@ -118,11 +118,11 @@ score2 = 0
 function bowling() {
     if (count<7) { alert("bowling team have to finish first"); return; }
      if (bat == 1) {
-        document.getElementById("bat_team").innerHTML = TEAM - B;
-        document.getElementById("bowl_team").innerHTML = TEAM - A;
+        document.getElementById("bat_team").innerHTML = TEAM_B;
+        document.getElementById("bowl_team").innerHTML = TEAM_A;
     } else {
-        document.getElementById("bat_team").innerHTML = TEAM - A;
-        document.getElementById("bowl_team").innerHTML = TEAM - B;
+        document.getElementById("bat_team").innerHTML = TEAM_A;
+        document.getElementById("bowl_team").innerHTML = TEAM_B;
     }
     if (count2 > 6) {
         alert("No possible clicks")
