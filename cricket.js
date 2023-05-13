@@ -3,8 +3,8 @@ s_a = 0
 s_b = 0
 TEAM-A="TEAM-A"
 TEAM-B="TEAM-B"
-TEAM-A=promt("enter 1st team name");
-TEAM-B=promt("enter 2nd team name");
+TEAM-A=prompt("enter 1st team name");
+TEAM-B=prompt("enter 2nd team name");
 toss = prompt("enter Head(h) or Tail(t)");
 String(toss)
 
