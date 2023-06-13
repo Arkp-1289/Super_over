@@ -4,16 +4,17 @@ s_b = 0
 TEAM_A="TEAM-A"
 TEAM_B="TEAM-B"
 TEAM_A=prompt("enter 1st team name");
-TEAM_B=prompt("enter 2nd team name");
 TEAM_A=TEAM_A.toUpperCase()
+TEAM_B=prompt("enter 2nd team name");
 TEAM_B=TEAM_B.toUpperCase()
-// batcolour(TEAM_A);
-// function batcolour(team){
-//     if (team=="CSK"){document.getElementsByClassName('pixel').style.backgroundColor = "yellow"}
-//    else if (team=="MI"){document.getElementsByClassName('pixel').style.backgroundColor = "blue"}
-//  else if (team=="RCB"){document.getElementsByClassName('pixel').style.backgroundColor = "red"}
-    
-// }
+while (TEAM_A==TEAM_B){
+    TEAM_B=prompt("enter 2nd team name");
+    TEAM_B=TEAM_B.toUpperCase()  
+}
+
+arr=["bg-yellow-600 rounded-sm min-h-fit","bg-red-600 rounded-sm min-h-fit","bg-blue-600 rounded-sm min-h-fit","bg-blue-600 rounded-sm min-h-fit","bg-purple-600 rounded-sm min-h-fit","bg-blue-600 rounded-sm min-h-fit","bg-blue-600 rounded-sm min-h-fit",]
+
+if (TEAM_A=="CSK"){console.log("csk isds")}
 toss = prompt("enter Head(h) or Tail(t)");
 String(toss)
 
@@ -45,6 +46,37 @@ while (option.toLowerCase() != "bat" && option.toLowerCase() != "bowl") {
 res(T)
 console.log("T " + T)
 
+function change_col(x,y){
+
+
+    switch (x) {
+    
+        case "CSK":
+    
+            // document.getElementsByClassName('bg-orange-600 rounded-sm min-h-fit')[0].className=arr[0]
+            document.getElementById(y).className=arr[0];
+            break;
+        case "RCB":
+            // document.getElementsByClassName('bg-orange-600 rounded-sm min-h-fit')[0].className=arr[1]
+            document.getElementById(y).className=arr[1];
+    
+            break;
+        
+        case "MI":
+        // document.getElementsByClassName('bg-orange-600 rounded-sm min-h-fit')[0].className=arr[1]
+        document.getElementById(y).className=arr[2];
+
+        break;
+      
+        default:
+            console.log("X"+x+" "+y)
+            break;
+    }
+    
+}
+
+
+
 function res(T) {
     console.log("T " + T)
     console.log("inside Ress")
@@ -54,6 +86,8 @@ function res(T) {
             bat = 1;
             document.getElementById("bat_team").innerHTML = TEAM_A;
             document.getElementById("bowl_team").innerHTML = TEAM_B;
+            change_col(TEAM_A,"batting_side");
+            change_col(TEAM_B,"bowling_side");
 
 
         } else {
@@ -61,6 +95,8 @@ function res(T) {
             bat = 2;
             document.getElementById("bowl_team").innerHTML = TEAM_A;
             document.getElementById("bat_team").innerHTML = TEAM_B;
+            change_col(TEAM_B,"batting_side");
+            change_col(TEAM_A,"bowling_side")
 
         }
 
@@ -71,13 +107,16 @@ function res(T) {
             bat = 2;
             document.getElementById("bat_team").innerHTML = TEAM_B;
             document.getElementById("bowl_team").innerHTML = TEAM_A;
+            change_col(TEAM_B,"batting_side");
+            change_col(TEAM_A,"bowling_side")
 
         } else {
             document.getElementById("tres").innerHTML += TEAM_B +" won the toss and Elected to Bowl first";
             bat = 1;
             document.getElementById("bowl_team").innerHTML = TEAM_B;
             document.getElementById("bat_team").innerHTML = TEAM_A;
-
+            change_col(TEAM_A,"batting_side");
+            change_col(TEAM_B,"bowling_side");
         }
 
     }
@@ -89,6 +128,7 @@ bow_w_c = 0
 count = 1
 
 function batting() {
+
     if (count > 6) {
         alert("No possible clicks")
         return;
@@ -125,13 +165,18 @@ score2 = 0
 
 
 function bowling() {
+   
     if (count<7) { alert("bowling team have to finish first"); return; }
      if (bat == 1) {
         document.getElementById("bat_team").innerHTML = TEAM_B;
         document.getElementById("bowl_team").innerHTML = TEAM_A;
+        change_col(TEAM_B,"batting_side");
+        change_col(TEAM_A,"bowling_side");
     } else {
         document.getElementById("bat_team").innerHTML = TEAM_A;
         document.getElementById("bowl_team").innerHTML = TEAM_B;
+        change_col(TEAM_A,"batting_side");
+        change_col(TEAM_B,"bowling_side");
     }
     if (count2 > 6) {
         alert("No possible clicks")

@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-sky-950 text-white h-screen ml-2 mr-2">
+<body class="text-white h-screen ml-2 mr-2" background="img.jpg" style="height: 100vh; width: 100%; background-repeat: no-repeat; background-size: cover; overflow: hidden;">
     <h1 class="text-5xl text-teal-500 text-center">Crick Play</h1>
     <!-- <br> -->
     <div class="bg-cyan-700 m-4 border-cyan-100">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="grid grid-cols-3 text-center content-center">
-        <div class="bg-orange-600 rounded-sm min-h-fit">
+        <div class="bg-orange-600 rounded-sm min-h-fit" id="bowling_side">
             <h2 id="bowl_team">Column 1</h2>
             <p> Bowling</p>
             <div class="h-40"></div>
@@ -37,7 +37,7 @@
             <h2>Balls Remaining</h2>
             <h1 id="rem_balls"></h1>
         </div>
-        <div class="bg-sky-600">
+        <div class="bg-sky-600" id="batting_side">
             <h2 id="bat_team">Column 3</h2>
             <p>Batting</p>
             <div class="h-40"></div>
